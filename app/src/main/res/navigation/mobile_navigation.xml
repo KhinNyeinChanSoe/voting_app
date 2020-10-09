@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.voting_app_.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_king"
+        android:name="com.example.voting_app_.ui.king.KingFragment"
+        android:label="@string/title_king"
+        tools:layout="@layout/fragment_king" >
+        <action
+            android:id="@+id/action_navigation_king_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_queen"
+        android:name="com.example.voting_app_.ui.queen.QueenFragment"
+        android:label="@string/title_queen"
+        tools:layout="@layout/fragment_queen" >
+        <action
+            android:id="@+id/action_navigation_queen_to_queenDetailsFragment"
+            app:destination="@id/queenDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.voting_app_.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="item"
+            app:argType="com.example.voting_app_.model.KingQueenItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/queenDetailsFragment"
+        android:name="com.example.voting_app_.ui.detail.QueenDetailsFragment"
+        android:label="fragment_queen_details"
+        tools:layout="@layout/fragment_queen_details" >
+        <argument
+            android:name="queen_item"
+            app:argType="com.example.voting_app_.model.KingQueenItem" />
+    </fragment>
+</navigation>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Voting_app_</string>
+    <string name="title_home">Home</string>
+    <string name="title_king">King</string>
+    <string name="title_queen">Queen</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
